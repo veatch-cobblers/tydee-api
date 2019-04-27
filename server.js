@@ -1,8 +1,16 @@
 const express = require("express");
-
 const app = express();
-const port = 8080;
+const bodyParser = require('body-parser');
 
-app.get('/', (req, res) => res.send('Hello World!'));
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.json());
+
+let port = process.env.PORT || 8080;
+
+
+app.use('/api/trashcan', require('./routes/trashcan'));
+
+app.listen(port, () => {
+    console.log('Server is up on port ' + port);
+});
