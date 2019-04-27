@@ -1,0 +1,19 @@
+{
+  "name": "tydee-api",
+  "version": "1.0.0",
+  "description": "api for tydee",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "tydee",
+    "tensorflow",
+    "api"
+  ],
+  "author": "Veatch Cobblers",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
